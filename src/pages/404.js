@@ -35,15 +35,7 @@ const NotFoundPage = () => {
         <span role="img" aria-label="Pensive emoji">
           😔
         </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
+        It seems I don't have that page on my site.
         <br />
         <Link to="/">Go home</Link>.
       </p>
