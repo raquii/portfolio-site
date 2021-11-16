@@ -1,9 +1,9 @@
 import React from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import './layout.css';
+import '../css/main.css';
 
-function Layout({children}) {
+function Layout({ children }) {
     return (
         <>
             <Navbar />

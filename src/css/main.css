@@ -1,0 +1,20 @@
+:root{
+    --background-default: #ffffff;
+    --indigo-20: #BFDDED;
+    --indigo-40: #92C5E1;
+    --indigo-60: #548EA7;
+    --indigo-80: #316684;
+    --indigo-100: #004966;
+    --copper-100: #B67A3E;
+    --rose-100:#C97F83;
+    --raisin-100:#262629;
+    --ghost-100:#f5f7fa;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    text-align: center;
+}
