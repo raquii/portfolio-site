@@ -1,16 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
+import { FiMenu } from "react-icons/fi";
+import { MdClose } from "react-icons/md";
+
+import NavLinks from "../constants/links"
 
 const Navbar = () => {
+	const [show, setShow] = useState(false);
+
 	return (
 		<nav id="navbar">
-			<Link to="/">Home</Link>
-			<Link to="/about">About</Link>
-			<Link to="/projects">Projects</Link>
-			<Link to="/blog">Blog</Link>
-			<Link to="/contact">Contact</Link>
-			<Link to="/voice">Voice Lessons</Link>
-		</nav>
+			<div className="nav-div">
+				<div className="nav-header">
+					<Link to="/">
+						<h1>Raquel</h1>
+					</Link>
+					<button className="nav-btn" onClick={() => setShow(!show)} >
+						{show ? <MdClose /> : <FiMenu />}
+					</button>
+				</div>
+				<div className={show ? "nav-menu show-links" : "nav-menu"}>
+					<NavLinks />
+				</div>
+			</div>
+		</nav >
 	);
 };
 
