@@ -4,9 +4,9 @@ import Layout from "../components/Layout";
 function Voice() {
     return (
         <Layout>
-            <div>
-                voice
-            </div>
+            <main className="main">
+                <h2 className="pg-header">Voice Lessons</h2>
+            </main>
         </Layout>
     )
 }

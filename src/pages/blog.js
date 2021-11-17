@@ -3,9 +3,9 @@ import Layout from "../components/Layout";
 function Blog() {
     return (
         <Layout>
-            <div>
-                blog
-            </div>
+            <main className="main">
+                <h2 className="pg-header">Blog</h2>
+            </main>
         </Layout>
     )
 }

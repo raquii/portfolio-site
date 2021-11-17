@@ -1,11 +1,11 @@
 import React from 'react';
 import Layout from "../components/Layout";
-function Projects(){
-    return(
+function Projects() {
+    return (
         <Layout>
-            <div>
-                projects
-            </div>
+            <main className="main">
+                <h2 className="pg-header">Projects</h2>
+            </main>
         </Layout>
     )
 }
