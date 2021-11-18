@@ -20,7 +20,7 @@ const Navbar = () => {
 					</button>
 				</div>
 				<div className={show ? "nav-menu show-links" : "nav-menu"}>
-					<NavLinks />
+					<NavLinks setShow={setShow} />
 				</div>
 			</div>
 		</nav >
