@@ -34,16 +34,16 @@ const data = [
     },
 ];
 
-const links = data.map(link => {
+const NavLinks = ({ setShow }) => {
     return (
-        <li key={link.id}>
-            <Link to={link.url} className="nav-link" activeClassName="active-link">{link.text}</Link>
-        </li>
-    )
-});
-
-export default () => {
-    return (
-        <ul className="nav-links">{links}</ul>
+        <ul className="nav-links">{data.map(link => {
+            return (
+                <li key={link.id}>
+                    <Link to={link.url} className="nav-link" activeClassName="active-link" onClick={() => setShow(false)}>{link.text}</Link>
+                </li>
+            )
+        })}</ul>
     )
 };
+
+export default NavLinks;
