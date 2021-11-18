@@ -4,8 +4,9 @@ import {
     FaLinkedin,
     FaDev,
     FaTwitterSquare,
-    SiReplit,
+
 } from "react-icons/fa";
+import { SiReplit } from "react-icons/si"
 
 const data = [
     {
@@ -16,12 +17,12 @@ const data = [
     {
         id: 2,
         icon: <FaLinkedin className="social-icon"></FaLinkedin>,
-        url: "https://www.linked.com/in/raquelromanrodri",
+        url: "https://www.linkedin.com/in/raquel-roman-rodriguez/",
     },
     {
         id: 3,
         icon: <SiReplit className="social-icon"></SiReplit>,
-        url: "https://replit.com/@raquiitw",
+        url: "https://replit.com/@raquii",
     },
     {
         id: 4,
@@ -35,18 +36,17 @@ const data = [
     },
 ];
 
-const links = data.map(link => {
+const SocialLinks = () => {
     return (
-        <li key={link.id}>
-            <a href={link.url} className="social-link">
-                {link.icon}
-            </a>
-        </li>
-    )
-});
+        <div className="social-links">
+            {data.map(link => {
+                return (
+                    <a href={link.url} key={link.id} className="social-link">
+                        {link.icon}
+                    </a>
+                )
+            })}
+        </div>)
+}
 
-export default () => {
-    return (
-        <ul className='social-links'>{links}</ul>
-    )
-};
+export default SocialLinks;

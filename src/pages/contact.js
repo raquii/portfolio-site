@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from "../components/Layout";
+import SocialLinks from '../constants/socials';
 function Contact() {
     return (
         <Layout>
@@ -18,6 +19,7 @@ function Contact() {
                         <button type="submit" className="btn submit-btn">Submit</button>
                     </form>
                 </section>
+                <SocialLinks />
             </main>
         </Layout>
     )
