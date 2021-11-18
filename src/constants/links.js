@@ -36,7 +36,7 @@ const data = [
 
 const NavLinks = ({ setShow }) => {
     return (
-        <ul className="nav-links">{data.map(link => {
+        <ul className="nav-ul">{data.map(link => {
             return (
                 <li key={link.id}>
                     <Link to={link.url} className="nav-link" activeClassName="active-link" onClick={() => setShow(false)}>{link.text}</Link>

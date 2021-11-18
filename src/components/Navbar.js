@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
-
+import logo from '../assets/images/logo.png'
 import NavLinks from "../constants/links"
 
 const Navbar = () => {
@@ -10,18 +10,16 @@ const Navbar = () => {
 
 	return (
 		<nav id="navbar">
-			<div className="nav-div">
-				<div className="nav-header">
-					<Link to="/">
-						<h1>Raquel</h1>
-					</Link>
-					<button className="nav-btn" onClick={() => setShow(!show)} >
-						{show ? <MdClose /> : <FiMenu />}
-					</button>
-				</div>
-				<div className={show ? "nav-menu show-links" : "nav-menu"}>
-					<NavLinks setShow={setShow} />
-				</div>
+			<div className="nav-header">
+				<Link to="/">
+					<img src={logo} alt="raquel roman-rodriguez" className="logo-img" />
+				</Link>
+				<button className="nav-btn" onClick={() => setShow(!show)} >
+					{show ? <MdClose /> : <FiMenu />}
+				</button>
+			</div>
+			<div className={show ? "nav-links show-links" : "nav-links"}>
+				<NavLinks setShow={setShow} />
 			</div>
 		</nav >
 	);
