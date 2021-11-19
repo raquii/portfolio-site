@@ -82,7 +82,6 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 6rem;
     width: 100%;
     z-index: 200;
 }
@@ -93,15 +92,16 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 90%;
 }
 
 .logo-img{
     display: inline-block;
-    max-height: 56px;
-    max-width: 225px;
-    padding: .2rem;
     vertical-align: middle;
+    border-radius: 2pt;
+    margin-left: 10pt;
 }
+
 
 .nav-btn{
     display: none;
@@ -177,15 +177,15 @@ a{
         flex-flow: column;
         height: auto;
     }
+    
+    .logo-img{
+        margin-left: 0;
+    }
 
     .nav-btn{
         display: block;
         background: transparent;
         /* border: none; */
-    }
-
-    .nav-header{
-        width: 90%;
     }
 
     .nav-links{
