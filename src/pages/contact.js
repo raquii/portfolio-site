@@ -5,10 +5,11 @@ function Contact() {
     return (
         <Layout>
             <main className="main">
-                <section className="form contact-info">
+                <section className="contact-content">
                     <h3>Want to get in touch?</h3>
+                    <SocialLinks />
                 </section>
-                <section>
+                <section className="contact-form-container">
                     <form className="contact-form">
                         <label htmlFor="name">Name</label>
                         <input type="text" name="name" id="name" />
@@ -19,7 +20,6 @@ function Contact() {
                         <button type="submit" className="btn submit-btn">Submit</button>
                     </form>
                 </section>
-                <SocialLinks />
             </main>
         </Layout>
     )
