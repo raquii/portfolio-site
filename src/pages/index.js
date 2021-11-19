@@ -1,5 +1,7 @@
 import { graphql } from "gatsby";
 import * as React from "react";
+import "@fontsource/poppins";
+import "@fontsource/montserrat";
 
 import Layout from "../components/Layout";
 import Projects from "../components/Projects";
@@ -12,10 +14,10 @@ const IndexPage = ({ data }) => {
       <main className="main">
         <title>Home Page</title>
         <h1>
-          Hi, I'm Raquel.
+          Hello, I'm Raquel.
         </h1>
         <p>
-          I'm a software developer based in Cleveland, Ohio. I'm also a professional singer and a former-academic.
+          I'm a software developer based in Cleveland, Ohio.
         </p>
         <Projects projects={projects} title="Featured Projects" showLink />
       </main>

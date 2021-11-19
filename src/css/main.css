@@ -27,6 +27,15 @@
     --button-hover-text:#f5f7fa;
 
     --max-width: 1200px;
+
+    --primary-font: "Poppins", san-serif;
+    --secondary-font: "Montserrat";
+}
+
+body{
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    margin-top: 2rem;
 }
 
 ul {
@@ -36,6 +45,26 @@ ul {
 
 a{
     text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4{
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--secondary-font);
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 2.5rem;
+}
+h3 {
+    font-size: 1.75rem;
+}
+h4 {
+    font-size: 1rem;
 }
 
 .btn{
@@ -140,6 +169,7 @@ a{
     max-width: var(--max-width);
     margin: 0 auto;
     min-height: calc(100vh - 12rem);
+    margin-top: 2rem;
 }
 
 /*########*/
@@ -158,6 +188,100 @@ a{
 .portrait-container{
     border-radius: 50%;
     width: 40vw;
+}
+
+/*########*/
+/* Projects */
+/*#######*/
+
+/*individual project div container*/
+.project{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+/* project image */
+.project-img{
+    grid-column: 1 / span 8;
+    grid-row: 1 / 1;
+    height: 30rem;
+    z-index: 1;
+    border-radius: 3pt;
+}
+
+.project-img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, #9cfff27c, #222);
+    opacity: 0.85;
+    /* THIS NEEDS A TRANSITION */
+}
+
+.project:hover .project-img::after {
+    opacity: 0;
+}
+
+/* holds all other project information */
+.project-info{
+    padding: 1rem 2rem;
+    background: #548EA7;
+    z-index: 1;
+    grid-column: 5 /12;
+    grid-row: 1 / 1;
+    border-radius: 3pt;
+}
+
+/* project header */
+.project-info h3{
+
+}
+
+/* project description */
+.project-info p{
+    
+}
+
+/* ul of project features */
+.project-details{
+    
+}
+
+.project-details li{
+    
+}
+
+/* div holding multiple <a> */
+.project-links{
+
+}
+
+/* div of span ele */
+.project-stack span{
+    display: inline-block;
+    font-variant: all-petite-caps;
+    margin: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    background: #B67A3E;
+    border-radius: 4pt;
+}
+
+.contact-content{
+    flex: 0 1 50%;
+}
+
+.contact-form-container{
+    flex: 0 1 50%;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
 }
 
 /*########*/
