@@ -12,11 +12,11 @@ function Contact() {
                 <section className="contact-form-container">
                     <form className="contact-form">
                         <label htmlFor="name">Name</label>
-                        <input type="text" name="name" id="name" />
+                        <input className="form-input" type="text" name="name" id="name" />
                         <label htmlFor="email">Email</label>
-                        <input type="email" name="email" id="email" />
+                        <input className="form-input" type="email" name="email" id="email" />
                         <label htmlFor="message">Message</label>
-                        <textarea name="message" id="message" />
+                        <textarea className="form-input" name="message" rows="5" cols="33" id="message" />
                         <button type="submit" className="btn submit-btn">Submit</button>
                     </form>
                 </section>
