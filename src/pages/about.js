@@ -18,13 +18,19 @@ export default function About() {
 							I have been paid to make noises.
 							Now, I would like to be paid to boss computers around.
 						</p>
-						<Link to="/contact" className="btn contact-btn">Contact</Link>
+						<Link to="/contact" className="btn contact-btn">Contact Me</Link>
 						<SocialLinks />
 
 					</div>
 					<StaticImage
 						src='../assets/images/self.png'
-						alt="drawn portrait of raquel"
+						alt="illustration of raquel"
+						className="img-top portrait-container"
+						placeholder="blurred"
+					/>
+					<StaticImage
+						src='../assets/images/profpic.jpg'
+						alt="raquel smiling in a red shirt"
 						className="portrait-container"
 						placeholder="blurred"
 					/>
