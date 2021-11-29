@@ -10,20 +10,21 @@ const Navbar = () => {
 
 	return (
 		<nav id="navbar">
-			<div className="nav-header">
-				<Link to="/">
-					<StaticImage
+			<Link to="/" className="logo-link">
+				<span id="logo-span">R³</span>
+				{/* <span id="page-logo">r³</span> */}
+				{/* <StaticImage
 						src='../assets/images/logo.png'
 						alt="raquel roman-rodriguez"
 						className="logo-img"
 						height="56"
 						quality="100"
-						placeholder="dominantColor" />
-				</Link>
-				<button className="nav-btn" onClick={() => setShow(!show)} >
-					{show ? <MdClose /> : <FiMenu />}
-				</button>
-			</div>
+						placeholder="dominantColor" /> */}
+			</Link>
+			<button className="nav-btn" onClick={() => setShow(!show)} >
+				{show ? <MdClose /> : <FiMenu />}
+			</button>
+
 			<div className={show ? "nav-links show-links" : "nav-links"}>
 				<NavLinks setShow={setShow} />
 			</div>
