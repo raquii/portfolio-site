@@ -17,10 +17,11 @@
   "dependencies": {
     "@fontsource/montserrat": "^4.5.1",
     "@fontsource/poppins": "^4.5.0",
-    "gatsby": "^4.0.2",
+    "gatsby": "^4.2.0",
     "gatsby-plugin-image": "^2.2.0",
     "gatsby-plugin-sharp": "^4.2.0",
     "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-source-dev": "^0.1.4",
     "gatsby-source-filesystem": "^4.2.0",
     "gatsby-source-strapi": "^1.0.2",
     "gatsby-transformer-sharp": "^4.2.0",
