@@ -24,5 +24,11 @@ module.exports = {
         collectionTypes: [`jobs`, `projects`],
       },
     },
+    {
+      resolve: "gatsby-source-dev",
+      options: {
+        username: "raquii",
+      },
+    },
   ],
 };
