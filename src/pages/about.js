@@ -9,9 +9,8 @@ export default function About() {
 		<Layout>
 			<main className="main">
 				<section className="about-section">
-					<div>
-						<h2 className="pg-header">About</h2>
-						<p></p>
+					<h2 className="pg-header">About</h2>
+					<div className="about-text" >
 						<p>This is about me, a person, a human.
 							I am made of skin, bones, teeth, and hair.
 							I have existed as a conscious being for 29 years.
@@ -22,18 +21,21 @@ export default function About() {
 						<SocialLinks />
 
 					</div>
-					<StaticImage
-						src='../assets/images/self.png'
-						alt="illustration of raquel"
-						className="img-top portrait-container"
-						placeholder="blurred"
-					/>
-					<StaticImage
-						src='../assets/images/profpic.jpg'
-						alt="raquel smiling in a red shirt"
-						className="portrait-container"
-						placeholder="blurred"
-					/>
+					<div className="photo-div">
+						<StaticImage
+							src='../assets/images/self.png'
+							alt="illustration of raquel"
+							className="img-top portrait-container"
+							placeholder="blurred"
+						/>
+						<StaticImage
+							src='../assets/images/profpic.jpg'
+							alt="raquel smiling in a red shirt"
+							className="portrait-container"
+							imgClassName="selfie"
+							placeholder="blurred"
+						/>
+					</div>
 				</section>
 			</main>
 		</Layout >
