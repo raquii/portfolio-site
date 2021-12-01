@@ -261,7 +261,7 @@ h4 {
 .project-img{
     grid-column: 1 / span 6;
     grid-row: 1 / 1;
-    height: 30rem;
+    height: 20rem;
     z-index: 1;
     border-radius: var(--border-radius);
 }
@@ -313,15 +313,32 @@ h4 {
 
 /* div holding multiple <a> */
 .project-links{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.project-link, .project-link:visited{
+    margin-right: 1.5rem;
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+}
 
+.project-link>svg{
+    margin-right: .5rem;
+}
+
+.project-stack{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* div of span ele */
 .project-stack span{
-    display: inline-block;
     font-variant: all-petite-caps;
-    margin: 0.25rem;
-    padding: 0.25rem 0.5rem;
+    margin: 0.25rem .25rem 0;
+    padding: 0.25rem 0.75rem;
     background: var(--primary);
     border-radius: var(--border-radius);
 }
@@ -468,5 +485,9 @@ h4 {
         background-position: right bottom -.8px;
         background-size: 25% 25%;
   
+    }
+
+    .project-info h3{
+        font-size: 1.2rem;
     }
 }

@@ -17,7 +17,6 @@ function Projects({ projects, title, showLink }) {
                         demo={project.demo}
                         deployURL={project.deployURL}
                         image={project.image.localFile.childImageSharp.gatsbyImageData}
-                        details={project.project_details}
                         stack={project.stack}
                         id={project.id}
                     />
