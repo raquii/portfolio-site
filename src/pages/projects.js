@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 
 function ProjectsPage({ data }) {
   const { allStrapiProjects: { nodes: projects } } = data;
-  console.log(projects)
+
   return (
     <Layout>
       <main className="main">

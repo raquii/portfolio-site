@@ -13,7 +13,6 @@ function Project({
     stack,
     id
 }) {
-    console.log(stack)
     return (
         <div className="project">
             <GatsbyImage
