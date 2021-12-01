@@ -4,9 +4,8 @@ import { IoCalendarOutline } from 'react-icons/io5';
 import Layout from '../../components/Layout';
 
 
-function ArticleTemplate({ data }) {
-    const { devArticles: { article: { body_html, cover_image, published_at, title } } } = data;
-
+function ArticleTemplate(props) {
+    const { devArticles: { article: { body_html, cover_image, published_at, title } } } = props.data;
 
     return (
         <Layout>
@@ -44,5 +43,6 @@ export const query = graphql`
     }
   
 `;
+
 
 export default ArticleTemplate;
