@@ -12,15 +12,8 @@ const Navbar = () => {
 		<nav id="navbar">
 			<Link to="/" className="logo-link">
 				<span id="logo-span">R³</span>
-				{/* <span id="page-logo">r³</span> */}
-				{/* <StaticImage
-						src='../assets/images/logo.png'
-						alt="raquel roman-rodriguez"
-						className="logo-img"
-						height="56"
-						quality="100"
-						placeholder="dominantColor" /> */}
 			</Link>
+
 			<button className="nav-btn" onClick={() => setShow(!show)} >
 				{show ? <MdClose /> : <FiMenu />}
 			</button>
