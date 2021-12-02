@@ -4,7 +4,7 @@ import {
     FaLinkedin,
     FaDev,
     FaTwitterSquare,
-
+    FaEnvelopeSquare
 } from "react-icons/fa";
 import { SiReplit } from "react-icons/si"
 
@@ -33,6 +33,11 @@ const data = [
         id: 5,
         icon: <FaTwitterSquare className="social-icon"></FaTwitterSquare>,
         url: "https://twitter.com/raquelitaroman",
+    },
+    {
+        id: 6,
+        icon: <FaEnvelopeSquare className="social-icon"></FaEnvelopeSquare>,
+        url: "mailto:raquelanaroman@gmail.com",
     },
 ];
 
