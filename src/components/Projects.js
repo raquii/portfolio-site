@@ -25,7 +25,7 @@ function Projects({ projects, title, showLink }) {
             </div>
             {showLink &&
                 <Link to="/projects" className="btn">
-                    Projects
+                    See All Projects
                 </Link>
             }
         </section>
