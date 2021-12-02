@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby';
 import React from 'react';
-import Projects from '../components/Projects';
-import Layout from "../components/Layout";
+import Projects from '../../components/Projects';
+import Layout from "../../components/Layout";
 
 function ProjectsPage({ data }) {
   const { allStrapiProjects: { nodes: projects } } = data;
@@ -25,6 +25,7 @@ export const query = graphql`
         github
         demo
         deployURL
+        Slug
         stack {
           id
           item_name
