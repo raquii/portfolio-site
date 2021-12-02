@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import NavLinks from "../constants/links"
-import { StaticImage } from "gatsby-plugin-image";
 
 const Navbar = () => {
 	const [show, setShow] = useState(false);
