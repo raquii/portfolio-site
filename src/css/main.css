@@ -5,38 +5,31 @@
 }
 
 :root{
-    /* --bg: #263a42; */
-    /* --bg: #d2e0e6;
-    --indigo-20: #BFDDED;
-    --indigo-40: #92C5E1;
-    --indigo-60: #548EA7;
-    --indigo-80: #316684;
-    --indigo-100: #004966;
-    --copper-100: #e08e3b;
-    --raisin-100:#262629;
-    --link-hover: #B67A3E;
-    --ghost-100:#f5f7fa; */
     --bg:#f5efec;
-    --primary:#f99b84;
-    --primary-dark:#c36c57;
-    --primary-light:#ffcdb4;
+    --primary:#ea9588;
+    --primary-dark:#b5665b;
+    --primary-light:#ffcdbe;
 
-    --secondary:#93e2ec;
-    --secondary-dark:#4bacb8;
-    --secondary-light:#b4ffff;
+    --secondary:#1c6e82;
+    --secondary-dark:#004355;
+    --secondary-light:#549cb2;
 
     --text: #262629;
     --text-light:#f5f5f6;
     --link-color:#262629;
-    /* --link-color: #ffffff; */
-    --link-hover: #f5f5f6;
+    --link-hover: #f5efec;
+
+    --grey: #d3d4d3;
+    --white: #ffffff;
+    --black: #000000;
 
     --max-width: 1200px;
-    --border-radius:2pt;
+    --border-radius:4pt;
 
     --primary-font: "Poppins", san-serif;
     --secondary-font: "Montserrat";
 }
+
 html,body{
     overflow-x: hidden;
 }
@@ -88,38 +81,45 @@ h4 {
     display: inline-block;
     cursor: pointer;
     padding: 0.375rem 0.75rem;
-    background: var(--secondary-dark);
+    background: var(--secondary);
     color:var(--bg);
     border-radius: var(--border-radius);
     text-transform:uppercase;
     border:transparent;
     font-weight: 600;
-    margin-bottom: 6pt;
+    margin-bottom: 2rem;
+    -webkit-box-shadow: 3px 3px 7px -3px rgba(0,17,22,0.24), 3px 3px 7px -3px rgba(0,17,22,0.24); 
+    box-shadow: 3px 3px 7px -3px rgba(0,17,22,0.24), 3px 3px 7px -3px rgba(0,17,22,0.24);
 }
 
 
 .btn:hover{
-    background: var(--secondary);
+    background: var(--secondary-light);
+}
+
+.submit-btn{
+    margin-top: 1rem;
 }
 
 .social-links{
     display: flex;
-    width: 15rem;
+    width: 20rem;
     justify-content: space-between;
+    align-items: center;
 }
 
 .social-link{
     font-size: 1.8rem;
-    color: var(--primary);
+    color: var(--primary-dark);
     text-decoration: none;
 }
 
 .social-link:visited{
-    color: var(--primary);
+    color: var(--primary-dark);
 }
 
 .social-link:hover{
-    color: var(--primary-dark);
+    color: var(--secondary-dark);
 }
 
 /*########*/
@@ -183,19 +183,21 @@ h4 {
     border-top: none;
     margin-right: 1rem;
     font-size: 1rem;
-    background-image: linear-gradient(var(--primary) 50%, var(--secondary-light) 50%); 
+    background-image: linear-gradient(var(--primary) 50%, var(--secondary) 50%); 
     background-repeat: repeat-x;
     background-position: right bottom -.8px;
     background-size: 25% 25%;
 }
 .nav-link:hover{
-    background-image: linear-gradient(var(--bg) 50%, var(--indigo-60) 50%);
-}
-
-.active-link{
     background-position: right top -0.8px;
     background-size: 25% 18%;
-    background-image: linear-gradient(var(--primary-dark) 50%, var(--primary) 50%);
+    background-image: linear-gradient(var(--primary-light) 50%, var(--primary) 50%);
+}
+
+.active-link, .active-link:visited{
+    background-position: right top -0.8px;
+    background-size: 25% 18%;
+    background-image: linear-gradient(var(--secondary-dark) 50%, var(--primary) 50%);
 }
 
 /*########*/
@@ -208,6 +210,23 @@ h4 {
     margin: 0 auto;
     min-height: calc(100vh - 10rem);
     margin-top: 2rem;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+.home-header{
+    animation: fadeIn ease 4s;
+}
+.home-text{
+    animation: fadeIn ease 4s;
 }
 
 /*########*/
@@ -237,8 +256,6 @@ h4 {
 .portrait-container{
     border-radius: 50%;
     border: 2pt solid var(--primary-light);
-    width: 40vw;
-    height: 40vw;
     position:absolute;
     top: 50%;
     left: 50%;
@@ -267,21 +284,55 @@ h4 {
 /* Projects */
 /*#######*/
 
+.projects-container{
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: -32px;
+    width: calc(100% + 32px);
+    margin-left: -32px;
+    margin-bottom: 32px;
+}
+
+.project-shell{
+    display: block;
+    padding-left: 32px;
+    padding-top: 32px;
+    flex-basis: 33.333333%;
+    flex-grow: 0;
+    max-width: 33.333333%;
+}
+
+.project-shell:hover{
+    color:var(--text)
+}
+
+.project-pg{
+    display: block;
+    pointer-events: none;
+    cursor: default;
+    margin-bottom: 2rem;
+}
+
 /*individual project div container*/
 .project{
-    display: grid;
-    grid-template-columns: repeat(11, 1fr);
+    display: flex;
+    flex-flow: column nowrap;
     align-items: center;
-    margin-bottom: 4rem;
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+    border-radius: var(--border-radius);
+    background: var(--primary-light);
 }
 
 /* project image */
 .project-img{
-    grid-column: 1 / span 6;
-    grid-row: 1 / 1;
-    height: 20rem;
-    z-index: 1;
+    height: 25vh;
     border-radius: var(--border-radius);
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.project-img-pg{
+    height:35vh;
+    width: 100%;
 }
 
 .project-img::after {
@@ -291,9 +342,9 @@ h4 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom right, var(--primary-light), #222);
-    opacity: 0.45;
-    /* THIS NEEDS A TRANSITION */
+    background-color: var(--text);
+    opacity: 0.25;
+    transition: opacity .5s ease;
 }
 
 .project:hover .project-img::after {
@@ -302,31 +353,41 @@ h4 {
 
 /* holds all other project information */
 .project-info{
-    padding: 2rem;
+    padding: 1.5rem;
     background: var(--primary-light);
-    z-index: 1;
-    grid-column: 4 /12;
-    grid-row: 1 / 1;
     border-radius: var(--border-radius);
+    border-top: 3pt solid var(--primary-dark);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    width: 100%;
 }
 
 /* project header */
 .project-info h3{
     margin-top: 0;
-}
-
-/* project description */
-.project-info p{
-    
+    font-size: 1.5rem;
 }
 
 /* ul of project features */
-.project-details{
+.project-ul{
     
 }
 
-.project-details li{
-    
+.project-li{
+    display: grid;
+    border-radius: var(--border-radius);
+    background: #ffffffab;
+    padding: .8rem;
+    grid-template-columns: 1em auto;
+    margin-bottom: .5rem;
+    column-gap: .4rem;
+    align-items: start;
+}
+
+.project-li svg{
+    align-self: start;
+    margin-top: 0.25rem;
+    color: var(--primary-dark);
 }
 
 /* div holding multiple <a> */
@@ -335,12 +396,17 @@ h4 {
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 1rem;
+    margin-left: .2rem;
 }
 .project-link, .project-link:visited{
     margin-right: 1.5rem;
-    color: var(--primary-dark);
+    color: var(--secondary-dark);
     display: flex;
     align-items: center;
+}
+
+.project-link:hover{
+    color: var(--secondary);
 }
 
 .project-link>svg{
@@ -355,9 +421,11 @@ h4 {
 /* div of span ele */
 .project-stack span{
     font-variant: all-petite-caps;
+    font-weight: 500;
     margin: 0.25rem .25rem 0;
-    padding: 0.25rem 0.75rem;
-    background: var(--primary);
+    padding: 0.12rem 0.65rem .25rem;
+    background: var(--primary-dark);
+    color:var(--text-light);
     border-radius: var(--border-radius);
 }
 /*#############
@@ -409,6 +477,15 @@ h4 {
   CONTACT PAGE
 #############*/
 
+.contact-page{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact-header{
+    flex: 1 0 100%;
+    margin: 0;
+    align-self: center;
+}
 .contact-content{
     flex: 0 1 50%;
 }
@@ -449,6 +526,9 @@ h4 {
     text-align: center;
     background-color: var(--primary-light);
     margin-top:auto; 
+}
+.footer p{
+    margin: 0;
 }
 
 @media screen and (max-width: 600px) {
@@ -505,6 +585,11 @@ h4 {
   
     }
 
+    .project-shell{
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
     .project-info h3{
         font-size: 1.2rem;
     }
@@ -518,5 +603,17 @@ h4 {
         order: 2;
         width: 100%;
         height: 100pt;
+    }
+
+    .contact-page{
+        align-items: center;
+    }
+
+    .contact-content{
+        flex: 1 0 100%
+    }
+
+    .contact-form-container{
+        flex: 1 0 100%;
     }
 }
