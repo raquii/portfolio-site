@@ -92,7 +92,6 @@ h4 {
     box-shadow: 3px 3px 7px -3px rgba(0,17,22,0.24), 3px 3px 7px -3px rgba(0,17,22,0.24);
 }
 
-
 .btn:hover{
     background: var(--secondary-light);
 }
@@ -165,9 +164,6 @@ h4 {
     display: none;
 }
 
-.nav-links{
-}
-
 .nav-ul{
     display: flex;
     height: auto !important;
@@ -183,7 +179,7 @@ h4 {
     border-top: none;
     margin-right: 1rem;
     font-size: 1rem;
-    background-image: linear-gradient(var(--primary) 50%, var(--secondary) 50%); 
+    background-image: linear-gradient(var(--primary) 50%, var(--secondary-light) 50%); 
     background-repeat: repeat-x;
     background-position: right bottom -.8px;
     background-size: 25% 25%;
@@ -197,7 +193,7 @@ h4 {
 .active-link, .active-link:visited{
     background-position: right top -0.8px;
     background-size: 25% 18%;
-    background-image: linear-gradient(var(--secondary-dark) 50%, var(--primary) 50%);
+    background-image: linear-gradient(var(--secondary) 50%, var(--primary) 50%);
 }
 
 /*########*/
@@ -279,6 +275,15 @@ h4 {
     border-radius: 50%;
 }
 
+.learn-more-link,.learn-more-link:visited{
+    color: var(--primary-dark);
+    font-variant: all-petite-caps;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.learn-more-link:hover{
+    color: var(--secondary-dark);
+}
 
 /*########*/
 /* Projects */
@@ -317,22 +322,21 @@ h4 {
 .project{
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
-    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
-    border-radius: var(--border-radius);
+    height: 100%;
     background: var(--primary-light);
+    border-radius: var(--border-radius);
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
 }
 
 /* project image */
 .project-img{
-    height: 25vh;
+    flex: 0 1 30%;
     border-radius: var(--border-radius);
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
 .project-img-pg{
-    height:35vh;
-    width: 100%;
+    flex: 0 1 20%;
 }
 
 .project-img::after {
@@ -353,24 +357,22 @@ h4 {
 
 /* holds all other project information */
 .project-info{
+    flex: 1 0 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 1.5rem;
     background: var(--primary-light);
     border-radius: var(--border-radius);
     border-top: 3pt solid var(--primary-dark);
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    width: 100%;
 }
 
 /* project header */
 .project-info h3{
     margin-top: 0;
     font-size: 1.5rem;
-}
-
-/* ul of project features */
-.project-ul{
-    
 }
 
 .project-li{
@@ -427,50 +429,6 @@ h4 {
     background: var(--primary-dark);
     color:var(--text-light);
     border-radius: var(--border-radius);
-}
-/*#############
-  BLOGS PAGES
-#############*/
-.blog-container{
-
-}
-.blog-header{
-    word-break: break-word;
-}
-.blog-image-container{
-    position: relative;
-    width: 100%;
-    padding-top: 42%;
-}
-.blog-img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 8pt;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-.blog-info{
-    border-radius: 8pt;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    background-color: var(--bg);
-    padding: 2%;
-    margin-bottom: 15pt;
-}
-.blog-title{
-
-}
-.blog-date{
-
-}
-.blog-body{
-   
 }
 
 /*#############
