@@ -20,15 +20,28 @@ function Project({
 }) {
 
     return (
-        <Link to={`/projects/${slug}`} className={className}>
+        <div className={className}>
             <div className="project" >
                 <GatsbyImage
                     alt={title}
                     image={image}
-                    className={className !== "project-shell" ? "project-img project-img-pg" : "project-img"}
+                    className="project-img"
                 />
                 <div className="project-info">
-                    <h3>{title}</h3>
+                    <Link to={`/projects/${slug}`} className={className !== "project-shell" ? "project-pg-link disabled" : "project-pg-link"}><h3>{title}</h3></Link>
+
+                    <div className="project-links">
+                        <a title="GitHub" className="project-link" href={github}>
+                            <FaGithub /> GitHub
+                        </a>
+                        {demo && <a title="Demo Video" className="project-link" href={demo}>
+                            <FaYoutube /> Demo
+                        </a>}
+                        {deployURL && <a title="Deployed App" className="project-link" href={deployURL}>
+                            <FaRocket /> App Site
+                        </a>}
+                    </div>
+
                     <p>{description}</p>
 
                     {className === "project-pg" &&
@@ -36,23 +49,12 @@ function Project({
                             {details.map(d => <li key={d.id} className="project-li"><IoIosArrowDroprightCircle /> {d.item_name}</li>)}
                         </ul>
                     }
-                    <div className="project-links">
-                        <a className="project-link" href={github}>
-                            <FaGithub /> GitHub
-                        </a>
-                        {demo && <a className="project-link" href={demo}>
-                            <FaYoutube /> Demo Video
-                        </a>}
-                        {deployURL && <a className="project-link" href={deployURL}>
-                            <FaRocket /> Deployed App
-                        </a>}
-                    </div>
                     <div className="project-stack">
                         {stack.map(item => <span key={item.id} className="project-stack">{item.item_name}</span>)}
                     </div>
                 </div>
             </div>
-        </Link>
+        </div>
     )
 }
 

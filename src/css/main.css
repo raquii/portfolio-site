@@ -329,8 +329,6 @@ h4 {
 
 .project-pg{
     display: block;
-    pointer-events: none;
-    cursor: default;
     margin-bottom: 2rem;
 }
 
@@ -342,6 +340,15 @@ h4 {
     background: var(--primary-light);
     border-radius: var(--border-radius);
     box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+}
+
+.project-pg-link{
+    text-align: center;
+}
+
+.project-pg-link.disabled{
+    cursor:default;
+    pointer-events: none;
 }
 
 /* project image */
@@ -392,7 +399,7 @@ h4 {
 /* project header */
 .project-info h3{
     margin-top: 0;
-    font-size: 1.5rem;
+    font-size: 1.70rem;
 }
 
 .project-li{
@@ -417,7 +424,7 @@ h4 {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 1rem;
+    justify-content: center;
     margin-left: .2rem;
 }
 .project-link, .project-link:visited{
@@ -433,6 +440,7 @@ h4 {
 
 .project-link>svg{
     margin-right: .5rem;
+    font-size: 1.5rem;
 }
 
 .project-stack{
@@ -507,6 +515,26 @@ h4 {
 }
 .footer p{
     margin: 0;
+}
+
+@media screen and (max-width: 900px) {
+    .project-shell{
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+
+    .project-info{
+        justify-content: space-evenly;
+    }
+
+    .project-info h3{
+        font-size: 1.75rem;
+    }
+
+    .project-img::after {
+        background-color: transparent;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -592,8 +620,12 @@ h4 {
         max-width: 100%;
     }
 
-    .project-info h3{
-        font-size: 1.2rem;
+    .project{
+        height: auto;
+    }
+
+    .project-info{
+        justify-content: flex-start;
     }
 
     .project-img::after {
