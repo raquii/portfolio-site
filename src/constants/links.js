@@ -51,6 +51,14 @@ const voiceLinks = [
 const NavLinks = ({ setShow }) => {
     const [open, setOpen] = useState(false);
 
+    function handleKeyDown(e) {
+        if (e.keyCode === 40) {
+            setOpen(true);
+        } else if (e.keyCode === 38) {
+            setOpen(false);
+        }
+    };
+
     return (
         <ul className="nav-ul">
             {links.map(link => {
@@ -60,10 +68,16 @@ const NavLinks = ({ setShow }) => {
                     </li>
                 );
             })}
-            <li className="voice-li" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
+            <li className="voice-li"
+                onClick={() => setOpen(!open)}
+                onMouseEnter={() => setOpen(true)}
+                onMouseLeave={() => setOpen(false)}
+                onKeyDown={handleKeyDown}
+                role="presentation"
+                tabIndex="0"
+            >
                 <div className="voice-link-div nav-link">
-                    <p onClick={() => setOpen(!open)}>voice</p> {open ? <IoIosArrowUp /> : <IoIosArrowDown />}
-
+                    <p aria-haspopup="true" aria-expanded={open ? "true" : "false"}>voice</p> {open ? <IoIosArrowUp /> : <IoIosArrowDown />}
                 </div>
                 <div className={open ? "voice-nav open-popup" : "voice-nav"}>
                     <ul>

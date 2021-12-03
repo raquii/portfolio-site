@@ -212,7 +212,6 @@ h4 {
     border-radius: 2px;
     left: -10px;
     top: 30px;
-
     overflow: hidden;
     padding: .5rem .5rem .2rem;
     background-color: var(--primary-light);
@@ -223,6 +222,14 @@ h4 {
     display: block;
     visibility: visible;
     overflow: visible;
+}
+
+.voice-link,.voice-link:visited{
+    background-image:none !important;
+}
+
+.voice-link:hover{
+    color:var(--secondary);
 }
 
 /*########*/
@@ -237,23 +244,6 @@ h4 {
     margin-top: 2rem;
 }
 
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-     }
-}
-
-.home-header{
-    animation: fadeIn ease 4s;
-}
-.home-text{
-    animation: fadeIn ease 4s;
-}
-
 /*########*/
 /* About */
 /*#######*/
@@ -262,7 +252,7 @@ h4 {
     display: flex;
     flex-flow: row wrap;
     padding-bottom: 3rem;
-    align-items: center;
+    align-items: stretch;
     height: 100%;
 }
 .pg-header{
@@ -270,21 +260,18 @@ h4 {
 }
 
 .about-text{
-    width: 50%;
+    flex: 1 0 50%;
 }
 
 .photo-div{
     position: relative;
-    flex: 1 0 50%;
+    flex: 0 1 45%;
 }
 
 .portrait-container{
-    border-radius: 50%;
     border: 2pt solid var(--primary-light);
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position:absolute!important;
+    border-radius: 50%;
     -webkit-transition: opacity 1s ease-in-out;
     -moz-transition: opacity 1s ease-in-out;
     -o-transition: opacity 1s ease-in-out;
@@ -382,6 +369,10 @@ h4 {
 
 .project:hover .project-img::after {
     opacity: 0;
+}
+
+.project-pg>.project>.project-img::after{
+    background-color:transparent;
 }
 
 /* holds all other project information */
@@ -568,6 +559,7 @@ h4 {
     .voice-nav{
         visibility: hidden;
         left: 53px;
+        top:0px;
         border-left: 2pt solid var(--primary);
         padding: 0rem 0.5rem;
         background-color: transparent;
