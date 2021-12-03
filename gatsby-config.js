@@ -9,6 +9,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-gatsby-cloud`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -19,8 +20,8 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://localhost:1337`,
-        queryLimit: 100,
+        apiURL: process.env.API_URL || "http://localhost:1337",
+        queryLimit: 1000,
         collectionTypes: [`jobs`, `projects`],
       },
     },
