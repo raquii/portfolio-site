@@ -177,7 +177,7 @@ h4 {
     text-align: center;
     padding: 0;
     border-top: none;
-    margin-right: 1rem;
+    margin: 0 1rem 0 0;
     font-size: 1rem;
     background-image: linear-gradient(var(--primary) 50%, var(--secondary-light) 50%); 
     background-repeat: repeat-x;
@@ -194,6 +194,35 @@ h4 {
     background-position: right top -0.8px;
     background-size: 25% 18%;
     background-image: linear-gradient(var(--secondary) 50%, var(--primary) 50%);
+}
+.voice-link-div{
+    display: flex;
+    align-items: center;
+}
+.voice-link-div p{
+    margin: 0 .2rem 0 0;
+}
+.voice-li{
+    position: relative;
+}
+
+.voice-nav{
+    visibility: hidden;
+    position: absolute;
+    border-radius: 2px;
+    left: -10px;
+    top: 30px;
+
+    overflow: hidden;
+    padding: .5rem .5rem .2rem;
+    background-color: var(--primary-light);
+    transition: all .3s ease;
+}
+
+.open-popup{
+    display: block;
+    visibility: visible;
+    overflow: visible;
 }
 
 /*########*/
@@ -523,8 +552,34 @@ h4 {
         flex: 1 0 100%;
         height: auto;
         background-color: var(--primary-light);
+        overflow: visible;
         visibility: visible;
         transition:all .2s ease-in;
+    }
+
+    .voice-link-div:hover{
+        margin: 0;
+        background-image: none;
+    }
+    .voice-li{
+        margin-left: 15px;
+    }
+
+    .voice-nav{
+        visibility: hidden;
+        left: 53px;
+        border-left: 2pt solid var(--primary);
+        padding: 0rem 0.5rem;
+        background-color: transparent;
+        overflow: hidden;
+        height: 0pt;
+        position: relative;
+    }
+
+    .open-popup{
+        visibility: visible;
+        overflow: visible;
+        height: auto;
     }
 
     .nav-ul{
@@ -536,11 +591,8 @@ h4 {
     }
 
     .active-link{
-        background-image: linear-gradient(var(--primary-light) 50%, var(--primary-dark) 50%); 
-        background-repeat: repeat-x;
-        background-position: right bottom -.8px;
-        background-size: 25% 25%;
-  
+        background-image: none;
+        color:var(--primary-dark);
     }
 
     .project-shell{
@@ -550,6 +602,10 @@ h4 {
 
     .project-info h3{
         font-size: 1.2rem;
+    }
+
+    .project-img::after {
+        background-color: transparent;
     }
 
     .about-text{
