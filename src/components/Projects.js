@@ -7,7 +7,9 @@ function Projects({ projects, title, showLink }) {
 
     return (
         <section className="projects">
-            <h2 className="section-header">{title}</h2>
+            <div className="header-container">
+                <h2 className="section-header">{title}</h2>
+            </div>
             <div className="projects-container">
                 {projects.map(project => {
                     return <Project key={project.id}

@@ -244,6 +244,20 @@ h4 {
     margin-top: 2rem;
 }
 
+.header-container{
+    border-bottom: 1pt solid var(--secondary-dark);
+    margin-bottom: 2rem;
+    width: 90vw;
+    max-width: var(--max-width);
+    margin-left: -1.58rem;
+    padding: 0 1.5rem;
+}
+
+.section-header{
+    margin-bottom: 1.5rem;
+}
+
+
 /*########*/
 /* About */
 /*#######*/
@@ -304,6 +318,13 @@ h4 {
 /*########*/
 /* Projects */
 /*#######*/
+
+.projects{
+    padding: 0 1.5rem;
+    border: 1pt solid var(--primary-dark);
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+}
 
 .projects-container{
     display: flex;
