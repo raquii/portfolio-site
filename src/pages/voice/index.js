@@ -5,7 +5,10 @@ function Voice() {
     return (
         <Layout>
             <main className="main">
-                <h2 className="pg-header">Voice</h2>
+                <h1 className="pg-header">Voice</h1>
+                <section>
+
+                </section>
             </main>
         </Layout>
     )

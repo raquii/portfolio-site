@@ -13,11 +13,14 @@ const IndexPage = ({ data }) => {
     <Layout>
       <main className="main">
         <title>Home Page</title>
-        <h1>
+        <h1 className="home-header">
           Hello, I'm Raquel.
         </h1>
-        <p>
-          I'm a software developer based in Cleveland, Ohio.
+        <p className="home-text">
+          I'm a full-stack software developer based in Cleveland, Ohio. I am passionate about UI/UX design, accessibility,
+        </p>
+        <p className="home-text">
+          I'm also a professional singer and a former professor of music.
         </p>
         <Projects projects={projects} title="Featured Projects" showLink />
       </main>
@@ -35,6 +38,7 @@ export const query = graphql`
         github
         demo
         deployURL
+        Slug
         stack {
           id
           item_name
