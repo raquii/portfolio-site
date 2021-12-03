@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { FaGithub, FaYoutube, FaRocket } from "react-icons/fa"
 import { IoIosArrowDroprightCircle } from "react-icons/io";
