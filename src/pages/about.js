@@ -9,7 +9,7 @@ export default function About() {
 		<Layout>
 			<main className="main">
 				<section className="about-section">
-					<h2 className="pg-header">About</h2>
+					<h1 className="pg-header">About</h1>
 					<div className="about-text" >
 						<p>
 							I am a full-stack developer with a background in graphic design and music. I love solving puzzles, dreaming up inspiring UI/UX experiences, and learning about new technologies.
@@ -24,7 +24,7 @@ export default function About() {
 						</em></p>
 
 						<p>
-							Yes! And I still am. Thankfully, I had not made a pact with a jealous sea-witch regarding my voice at any point. I still sing and teach voice lessons. <Link to="/voice" className="learn-more-link">Learn More</Link>
+							Yes! I am. Thankfully, I had not made a pact with a jealous sea-witch regarding my voice at any point. I still sing and teach voice lessons. <Link to="/voice" className="learn-more-link">Learn More</Link>
 						</p>
 
 						<Link to="/contact" className="btn contact-btn">

@@ -527,19 +527,15 @@ h4 {
 
 .contact-page{
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
+    align-items: center;
 }
 .contact-header{
-    flex: 1 0 100%;
-    margin: 0;
     align-self: center;
 }
 .contact-content{
     flex: 0 1 50%;
-}
-
-.contact-form-container{
-    flex: 0 1 50%;
+    margin-bottom: 2rem;
 }
 
 .contact-form{
