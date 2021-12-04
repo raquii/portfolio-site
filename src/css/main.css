@@ -560,7 +560,7 @@ h4 {
 
 
 .voice-img {
-    position: absolute;
+    position: absolute!important;
     bottom: 0;
     left: 0;
     right: 0;
@@ -605,6 +605,7 @@ h4 {
 
 .voice-text{
     width: 90vw;
+    max-width: var(--max-width);
     margin: 0 auto;
     margin-bottom: 2rem;
 }
