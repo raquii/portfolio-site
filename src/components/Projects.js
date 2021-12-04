@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 import Project from "./Project";
 
-function Projects({ projects, title, showLink }) {
+function Projects({ projects, title }) {
 
     return (
         <section className="projects">
@@ -25,11 +24,6 @@ function Projects({ projects, title, showLink }) {
 
                 })}
             </div>
-            {showLink &&
-                <Link to="/projects" className="btn">
-                    See All Projects
-                </Link>
-            }
         </section>
     )
 };

@@ -130,6 +130,7 @@ h4 {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    height: 4rem;
     background-color: var(--primary);
     padding: .8rem 0;
 }
@@ -244,19 +245,45 @@ h4 {
     margin-top: 2rem;
 }
 
-.header-container{
-    border-bottom: 1pt solid var(--secondary-dark);
-    margin-bottom: 2rem;
-    width: 90vw;
-    max-width: var(--max-width);
-    margin-left: -1.58rem;
-    padding: 0 1.5rem;
+
+.home-pg{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
 }
 
-.section-header{
-    margin-bottom: 1.5rem;
+.home-header{
+    margin-bottom: 1rem;
+    margin-top: 0;
+    font-size: clamp(40px, 8vw, 80px);
 }
 
+.home-text{
+    font-size: clamp(25px, 5vw, 60px);
+}
+
+.name-span{
+    color: var(--secondary);
+}
+
+.projects-btn, .projects-btn:visited{
+    margin-top: 2rem;
+    background: transparent;
+    border: 1.3pt solid var(--secondary);
+    color:var(--secondary-dark);
+    box-shadow: 1px 3px 7px -3px #b5665b, 3px 1px 7px -3px #004355;
+    transition-delay: 300ms;
+}
+
+.projects-btn:hover{
+    background: transparent;
+    border-color:var(--primary-dark);
+    color:var(--primary-dark);
+}
 
 /*########*/
 /* About */
@@ -324,6 +351,19 @@ h4 {
     border: 1pt solid var(--primary-dark);
     border-radius: var(--border-radius);
     margin-bottom: 2rem;
+}
+
+.header-container{
+    border-bottom: 1pt solid var(--secondary-dark);
+    margin-bottom: 2rem;
+    width: 90vw;
+    max-width: var(--max-width);
+    margin-left: -1.58rem;
+    padding: 0 1.5rem;
+}
+
+.section-header{
+    margin-bottom: 1.5rem;
 }
 
 .projects-container{

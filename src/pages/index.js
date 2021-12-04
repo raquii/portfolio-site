@@ -1,62 +1,32 @@
-import { graphql } from "gatsby";
 import * as React from "react";
+import { Link } from "gatsby";
 import "@fontsource/poppins";
 import "@fontsource/montserrat";
 
 import Layout from "../components/Layout";
-import Projects from "../components/Projects";
 
-const IndexPage = ({ data }) => {
-  const { allStrapiProjects: { nodes: projects } } = data;
+
+const IndexPage = () => {
 
   return (
     <Layout>
-      <main className="main">
+      <main className="main home-pg">
         <title>Home Page</title>
         <h1 className="home-header">
-          Hello, I'm Raquel.
+          Hello, I'm <span className="name-span">Raquel</span>.
         </h1>
-        <p className="home-text">
-          I'm a full-stack software developer based in Cleveland, Ohio. I am passionate about UI/UX design, accessibility,
-        </p>
-        <p className="home-text">
-          I'm also a professional singer and a former professor of music.
-        </p>
-        <Projects projects={projects} title="Featured Projects" showLink />
+
+        <h2 className="home-text">
+          I'm a full-stack software developer.
+        </h2>
+
+        <Link to="/projects" className="btn projects-btn">
+          See My Projects
+        </Link>
+
       </main>
     </Layout>
   );
 };
-
-export const query = graphql`
-  {
-    allStrapiProjects(filter: {featured: {eq: true}}) {
-      nodes {
-        id
-        title
-        description
-        github
-        demo
-        deployURL
-        Slug
-        stack {
-          id
-          item_name
-        }
-        project_details {
-          id
-          item_name
-        }
-        image {
-          localFile {
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
-        }
-      }
-    }
-  }
-`
 
 export default IndexPage;
