@@ -1,10 +1,12 @@
 import React from 'react';
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../../components/Layout";
+import Head from '../../components/Head';
 
 function Voice() {
     return (
         <Layout>
+            <Head title="R³ - Voice" />
             <main className="main voice-pg">
                 <section className="voice-section-head">
                     <h1 className="voice-header">Voice</h1>

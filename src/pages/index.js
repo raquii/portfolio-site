@@ -4,14 +4,16 @@ import "@fontsource/poppins";
 import "@fontsource/montserrat";
 
 import Layout from "../components/Layout";
+import Head from "../components/Head";
 
 
 const IndexPage = () => {
 
   return (
     <Layout>
+      <Head title="R³ - Home" />
       <main className="main home-pg">
-        <title>Home Page</title>
+
         <h1 className="home-header">
           Hello, I'm <span className="name-span">Raquel</span>.
         </h1>

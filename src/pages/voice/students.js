@@ -1,10 +1,12 @@
 import React from 'react';
 import Layout from '../../components/Layout';
+import Head from '../../components/Head';
 
 function students() {
 
     return (
         <Layout>
+            <Head title="R³ - Student Portal" />
             <main className="main">
                 <h1 className="pg-header">Student Portal</h1>
                 <section>

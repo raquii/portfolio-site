@@ -1,12 +1,15 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import Layout from "../components/Layout";
+import Head from "../components/Head";
 
 
 const NotFoundPage = () => {
   return (
     <Layout>
-      <main className="error-page">
+      <Head title="R³ - 404: Not Found" />
+      <main className="error-page main">
+
         <section>
           <h1>404</h1>
           <p>

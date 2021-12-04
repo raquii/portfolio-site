@@ -3,10 +3,13 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import Layout from "../components/Layout";
 import SocialLinks from "../constants/socials";
+import Head from "../components/Head";
 
 export default function About() {
 	return (
 		<Layout>
+			<Head title="R³ - About" />
+
 			<main className="main">
 				<section className="about-section">
 					<h1 className="pg-header">About</h1>

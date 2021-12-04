@@ -2,12 +2,14 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Project from '../../components/Project';
 import Layout from '../../components/Layout';
+import Head from '../../components/Head';
 
 
 function ProjectPage({ data }) {
   const { strapiProjects } = data;
   return (
     <Layout>
+      <Head title={`R³ - ${strapiProjects.title}`} />
       <main className="main">
         <Project title={strapiProjects.title}
           description={strapiProjects.description}
