@@ -217,6 +217,7 @@ h4 {
     padding: .5rem .5rem .2rem;
     background-color: var(--primary-light);
     transition: all .3s ease;
+    z-index: 100;
 }
 
 .open-popup{
@@ -561,6 +562,64 @@ h4 {
     color:var(--text);
 }
 
+
+.voice-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.voice-img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--text);
+    opacity: 0.35;
+}
+
+.voice-pg{
+    width: 100vw;
+}
+
+.voice-section-head{
+    height: 35vh;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.voice-header{
+    text-align: center;
+    z-index: 10;
+    padding: 1vh 10vw;
+    border: 4pt solid white;
+    color: white;
+}
+
+.voice-text{
+    width: 90vw;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.voice-text a, .voice-text a:visited{
+    color: var(--secondary);
+}
+.voice-text a:hover{
+    color: var(--primary-dark)
+}
+
 /*########*/
 /* Footer */
 /*#######*/
@@ -693,15 +752,25 @@ h4 {
         background-color: transparent;
     }
 
+    .about-section{
+        justify-content: center;
+    }
+
     .about-text{
         order:3;
         width: 100%;
     }
 
+    .pg-header{
+        text-align: center;
+        margin: 1rem 0;
+    }
+
     .photo-div{
         order: 2;
         width: 100%;
-        height: 100pt;
+        flex: 0 1 55%;
+        height: 140pt;
     }
 
     .contact-page{
