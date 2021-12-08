@@ -41,11 +41,6 @@ const voiceLinks = [
         text: "students",
         url: "/voice/students",
     },
-    {
-        id: "v4",
-        text: "media",
-        url: "/voice/media",
-    },
 ];
 
 const NavLinks = ({ setShow }) => {
